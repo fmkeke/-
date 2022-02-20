@@ -8,3 +8,4 @@ render 函数用过吗?
 
  
 
+ git config --global http.sslVerify  "false"
