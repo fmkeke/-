@@ -39,20 +39,18 @@ function useState(initState) {
   //更新
   if (hook.queue.pending) {
     //   更新baseState
-    let firstUpdate = hook.queue.pending
-    
+    let firstUpdate = hook.queue.pending;
 
     //每个hook是可能存在多个等待执行的操作吗
     do {
-        action = firstUpdate.action
-        baseState = action(firstUpdate.memoriesedState)
-        firstUpdate = firstUpdate.next
-    } while (firstUpdate !== queue.pending.next );
+      action = firstUpdate.action;
+      baseState = action(firstUpdate.memoriesedState);
+      firstUpdate = firstUpdate.next;
+    } while (firstUpdate !== queue.pending.next);
 
-    hook.queue.pending = null//为什么要执行这一步?,操作结束,删除所有action
-   
+    hook.queue.pending = null; //为什么要执行这一步?,操作结束,删除所有action
   }
-  hook.memoriesedState = baseState
+  hook.memoriesedState = baseState;
 
   return [baseState, dispatchAction.bind(null, hook.queue)];
 }
@@ -62,10 +60,10 @@ function dispatchAction(queue, action) {
     action,
     next: null,
   };
-  
-  //更新
+
+  //新增action
   if (queue.pending === null) {
-    // 循环链表 
+    // 循环链表
     update.next = update;
   } else {
     // 循环链表 添加元素
