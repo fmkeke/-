@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="kk">
+        ceshiceshi
+    </div>
+    <script  >
+   
+
+   class Person {
+       constructor(params){
+           this.name = params
+           this.log = () =>{
+               console.log(this.name,'name');
+           }
+       }
+
+       write(){
+           console.log('ceshi');
+       }
+   }
+   const speak = () =>{
+       console.log(this.name +'speak');
+   }
+   const re = new Person('123123')
+   console.log(re);
+   re.log()
+
+   Function.prototype.myCall = function (context,...restParams) {
+       if(context === undefined|| context === null){
+           context = window
+       } 
+    //    this  指向当前需要执行的函数
+       const funcName = Symbol('funcName')
+    //    console.log(context,funcName,this);
+       context[funcName] = this
+
+        const res =  context[funcName](restParams)
+       delete context[funcName]
+       return res
+   }
+
+   speak.myCall(re)
+
+   Function.prototype.myCall = function(){
+       console.log(arguments);
+   }
+</script>
+
+
+</body>
+</html>
