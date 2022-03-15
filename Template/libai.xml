@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns="http://cloudprint.cainiao.com/print"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://cloudprint.cainiao.com/print http://cloudprint-docs-resource.oss-cn-shanghai.aliyuncs.com/lpml_schema.xsd"
+    xmlns:editor="http://cloudprint.cainiao.com/schema/editor"
+    width="90" height="184" splitable="true">
+	<layout editor:_for_="1637830640791"
+		width="88.51"
+		height="7.38"
+		left="0.5"
+		top="3.73"
+		style="zIndex:1">
+		<text style="fontFamily:SimHei;fontSize:14;align:center;"
+			editor:_printName_="金利来大厦专营店"
+			editor:component="true"
+			editor:tip="金利来大厦专营店">
+			<![CDATA[金利来大厦专营店]]>
+		</text>
+	</layout>
+	<layout editor:_for_="1637830640791"
+		width="16.27"
+		height="5"
+		left="5.53"
+		top="14.31"
+		style="zIndex:2">
+		<text style="fontFamily:SimHei;align:right;valign:middle;"
+			editor:tip="横向文本">
+			<![CDATA[日期：]]>
+		</text>
+	</layout>
+	<layout editor:_for_="1637830640791"
+		width="41.4"
+		height="5"
+		left="24.12"
+		top="14.84"
+		style="zIndex:3">
+		<text style="fontFamily:SimHei;valign:middle;"
+			editor:_printName_="$business_date$"
+			editor:component="true"
+			editor:tip="营业日期">
+			<![CDATA[<%=_data.businessDate%>]]>
+		</text>
+	</layout>
+	<layout orientation="vertical">
+		<layout editor:_for_="1637830640791"
+			width="77.79"
+			left="6.26"
+			top="30.05"
+			style="zIndex:4" orientation="vertical">
+			<table style="borderWidth:0;cellBorderWidth:0;" editor:tip="表格">
+				<tr>
+					<td width="28.58" height="7.94" style="borderWidth:1pt">
+						<layout editor:_for_="1637830640791"
+							width="25.76"
+							height="5"
+							left="1.26"
+							top="1.37"
+							style="zIndex:2">
+							<text style="fontFamily:SimHei;fontSize:6;align:center;valign:middle;"
+								editor:tip="横向文本">
+								<![CDATA[货品编号]]>
+							</text>
+						</layout>
+					</td>
+					<td width="17.99" height="7.94" style="borderWidth:1pt">
+						<layout editor:_for_="1637830640791"
+							width="15.74"
+							height="5"
+							left="1.17"
+							top="1.44"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;align:center;valign:middle;"
+								editor:tip="横向文本">
+								<![CDATA[单价]]>
+							</text>
+						</layout>
+					</td>
+					<td width="12.7" height="7.94" style="borderWidth:1pt">
+						<layout editor:_for_="1637830640791"
+							width="10.18"
+							height="5"
+							left="1.17"
+							top="1.44"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;align:center;valign:middle;"
+								editor:tip="横向文本">
+								<![CDATA[数量]]>
+							</text>
+						</layout>
+					</td>
+					<td width="18.52" height="7.94" style="borderWidth:1pt">
+						<layout editor:_for_="1637830640791"
+							width="16.27"
+							height="5"
+							left="1.17"
+							top="1.71"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;align:center;valign:middle;"
+								editor:tip="横向文本">
+								<![CDATA[金额]]>
+							</text>
+						</layout>
+					</td>
+				</tr>
+				<% for(i=0;i<_data.goodsDetail.length;i++) {%>
+				<tr>
+					<td width="28.58" height="7.94" style="borderWidth:1pt">
+						<layout editor:_for_="1637830640791"
+							width="26.36"
+							height="5"
+							left="0.81"
+							top="1.54"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;fontSize:5;align:center;valign:middle;"
+								editor:component="true"
+								editor:tip="横向文本">
+								<![CDATA[<%=_data.goodsDetail[i].goodsCode%>]]>
+							</text>
+						</layout>
+					</td>
+					<td width="17.99" height="7.94" style="borderWidth:1pt">
+						<layout editor:_for_="1637830640791"
+							width="16.2"
+							height="5"
+							left="1.59"
+							top="1.6"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;align:center;valign:middle;"
+								editor:component="true"
+								editor:tip="横向文本">
+								<![CDATA[<%=_data.goodsDetail[i].price%>]]>
+							</text>
+						</layout>
+					</td>
+					<td width="12.7" height="7.94" style="borderWidth:1pt">
+						<layout editor:_for_="1637830640791"
+							width="10"
+							height="5"
+							left="0.86"
+							top="0.8"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;align:center;valign:middle;"
+								editor:component="true"
+								editor:tip="横向文本">
+								<![CDATA[<%=_data.goodsDetail[i].num%>]]>
+							</text>
+						</layout>
+					</td>
+					<td width="18.52" height="7.94" style="borderWidth:1pt">
+						<layout editor:_for_="1637830640791"
+							width="16.09"
+							height="5"
+							left="1.25"
+							top="1.32"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;align:center;valign:middle;"
+								editor:component="true"
+								editor:tip="横向文本">
+								<![CDATA[<%=_data.goodsDetail[i].money%>]]>
+							</text>
+						</layout>
+					</td>
+				</tr>
+				<%}%>
+				<tr>
+					<td width="46.57" height="7.94" colspan="2" style="borderWidth:1pt">
+						<layout editor:_for_="1637830640791"
+							width="41.14"
+							height="5"
+							left="2.23"
+							top="1.44"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;align:center;valign:middle;"
+								editor:tip="横向文本">
+								<![CDATA[合计]]>
+							</text>
+						</layout>
+					</td>
+					<td width="12.7" height="7.94" style="borderWidth:1pt">
+						<layout editor:_for_="1637830640791"
+							width="10.98"
+							height="5"
+							left="0.9"
+							top="1.44"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;align:center;valign:middle;"
+								editor:tip="横向文本">
+								<![CDATA[<%=_data.totalNum%>]]>
+							</text>
+						</layout>
+					</td>
+					<td width="18.52" height="7.94" style="borderWidth:1pt">
+						<layout editor:_for_="1637830640791"
+							width="16"
+							height="5"
+							left="1.17"
+							top="1.44"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;align:center;valign:middle;"
+								editor:tip="横向文本">
+								<![CDATA[<%=_data.payableAmount%>]]>
+							</text>
+						</layout>
+					</td>
+				</tr>
+				<tr>
+					<td width="77.79" height="3" colspan="4" style="borderWidth:0pt"></td>
+				</tr>
+				<tr>
+					<td width="77.79" height="6" colspan="4" style="borderWidth:0pt">
+						<layout editor:_for_="1637830640791"
+							width="25"
+							height="6"
+							left="1.38"
+							top="0"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;valign:middle;"
+								editor:tip="横向文本">
+								<![CDATA[收银明细：]]>
+							</text>
+						</layout>
+					</td>
+				</tr>
+				<% for(i=0;i<_data.settleMent.length;i++) {%>
+				<tr>
+					<td width="46.57" height="7" colspan="2" style="borderWidth:0pt">
+						<layout editor:_for_="1637830640791"
+							width="44.98"
+							height="6"
+							left="-1"
+							top="0"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;align:right;valign:middle;"
+								editor:_printName_="$settle_name$"
+								editor:component="true"
+								editor:tip="付款方式">
+								<![CDATA[<%=_data.settleMent[i].settleName%>]]>
+							</text>
+						</layout>
+					</td>
+					<td width="31.22" height="7" colspan="2" style="borderWidth:0pt">
+						<layout editor:_for_="1637830640791"
+							width="29.64"
+							height="6"
+							left="0"
+							top="0"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;valign:middle;"
+								editor:_printName_="$pay_money$"
+								editor:component="true"
+								editor:tip="实收金额">
+								<![CDATA[<%=_data.settleMent[i].totalMoney%>]]>
+							</text>
+						</layout>
+					</td>
+				</tr>
+				<% for(ii=0;ii<_data.settleMent[i].tradeCode.length;ii++) {%>
+				<%}%>
+				<%}%>
+				<tr>
+					<td width="77.79" height="3" colspan="4" style="borderWidth:0pt"></td>
+				</tr>
+				<% if(_data.remarks) {%>
+				<tr>
+					<td width="77.79" height="25" colspan="4" style="borderWidth:0pt">
+						<layout editor:_for_="1637830640791"
+							width="72.24"
+							height="25"
+							left="2.12"
+							top="1.06"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;"
+								editor:tip="横向文本">
+								<![CDATA[<%=_data.remarks%>]]>
+							</text>
+						</layout>
+					</td>
+				</tr>
+				<%}%>
+				<% if(_data.invoiceStatus == '30') {%>
+				<tr>
+					<td width="77.79" height="27.61" colspan="4" style="borderWidth:0pt">
+						<layout editor:_for_="1637830640791"
+							width="75.94"
+							height="13.89"
+							left="0.8"
+							top="0.8"
+							style="zIndex:1">
+							<text style="fontFamily:SimHei;"
+								editor:tip="横向文本">
+								<![CDATA[发票号 : <%=_data.invoiceNo%>    开票状态: 开票成功]]>
+							</text>
+						</layout>
+					</td>
+				</tr>
+				<%}%>
+				<% if(_data.invoiceStatus == '00') {%>
+				<tr>
+					<td width="77.79" height="54.96" colspan="4" style="borderWidth:0pt">
+						<layout editor:_for_="1637830640791"
+							width="42.22"
+							height="42.22"
+							left="15.87"
+							top="5.56"
+							style="zIndex:1">
+							<barcode type="qrcode"
+								ratioMode="keepRatio"
+								style="opacity:1;"
+								editor:tip="发票二维码">
+								<![CDATA[<%=_data.aisionUrlAndId%>]]>
+							</barcode>
+						</layout>
+					</td>
+				</tr>
+				<%}%>
+			</table>
+		</layout>
+	</layout>
+	<layout editor:_for_="1637830640792"
+		width="16.27"
+		height="5"
+		left="5.53"
+		top="21.98"
+		style="zIndex:5">
+		<text style="fontFamily:SimHei;align:right;valign:middle;"
+			editor:tip="横向文本">
+			<![CDATA[小票号：]]>
+		</text>
+	</layout>
+	<layout editor:_for_="1637830640792"
+		width="59.66"
+		height="5"
+		left="24.12"
+		top="22.51"
+		style="zIndex:6">
+		<text style="fontFamily:SimHei;valign:middle;"
+			editor:component="true"
+			editor:tip="横向文本">
+			<![CDATA[<%=_data.billNo%><%=_data.printNo >1 ? '(补打)':''%>]]>
+		</text>
+	</layout>
+</page>
